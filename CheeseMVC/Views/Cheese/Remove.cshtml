@@ -1,8 +1,10 @@
-﻿<h1>Remove</h1>
+﻿@model List<CheeseMVC.Models.Cheese>
+
+<h1>Remove</h1>
 
 <form method="post">
 
-    @foreach(var cheese in ViewBag.cheeses)
+    @foreach(var cheese in Model)
     {
         <input type="checkbox" name="cheeseIds" id="@cheese.ID" value="@cheese.ID" />
         <label for="@cheese.ID">@cheese.Name</label>

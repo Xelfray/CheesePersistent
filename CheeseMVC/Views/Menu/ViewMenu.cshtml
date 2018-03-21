@@ -1,0 +1,15 @@
+﻿@model CheeseMVC.ViewModels.ViewMenuVIewModel
+@{
+    ViewData["Title"] = ""+Model.Menu.Name;
+}
+
+<h2>ViewMenu</h2>
+
+<ul>
+    @foreach(var item in Model.Items)
+    {
+        <li>@item.Cheese.Name</li>
+    }
+</ul>
+
+<a asp-controller="Menu" asp-action="AddItem" asp-route-id="@Model.Menu.ID">Add an Item to the Menu.</a>
